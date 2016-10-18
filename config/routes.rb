@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   root 'static_pages#home'
-  get 'static_pages/home'
-  get 'static_pages/about'
-  get 'static_pages/portfolio'
-  get 'static_pages/blog'
-  get 'static_pages/contact'
+  get '/about',     to: 'static_pages#about'
+  get '/portfolio', to: 'static_pages#portfolio'
+  get '/blog',      to: 'static_pages#blog'
+  get '/contact',   to: 'static_pages#contact'
 end
