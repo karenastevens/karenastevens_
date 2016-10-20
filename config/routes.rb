@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/portfolio', to: 'static_pages#portfolio'
   get '/blog',      to: 'static_pages#blog'
   get '/contact',   to: 'static_pages#contact'
+  resources :users
 end
