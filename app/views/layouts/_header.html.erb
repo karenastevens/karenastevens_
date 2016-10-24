@@ -1,12 +1,12 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-default" style="background-color:white">
   <div class="container">
     <%= link_to "karena stevens", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Blog",   blog_path %></li>
-        <li><%= link_to "Portfolio", portfolio_path %></li>
-        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "HOME",   root_path %></li>
+        <li><%= link_to "BLOG",   blog_path %></li>
+        <li><%= link_to "PORTFOLIO", portfolio_path %></li>
+        <li><%= link_to "ABOUT", about_path %></li>
         <% if logged_in? %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
