@@ -10,10 +10,8 @@ class StaticPagesController < ApplicationController
   end
 
   def blog
-    if logged_in?
       @post = current_user.posts.build if logged_in?
-      @feed_items = current_user.feed.paginate(page: params[:page])
-    end
+      @feed_items = feed.paginate(page: params[:page])
   end
 
   def contact

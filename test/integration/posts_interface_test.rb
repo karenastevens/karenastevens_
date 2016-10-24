@@ -8,12 +8,11 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
 
   test "post interface" do
     log_in_as(@user)
-    get posts_path
+    get blog_path
     # Invalid submission
     assert_no_difference 'Post.count' do
       post posts_path, params: { post: { title: "", content: "" } }
     end
-    assert_select 'div#error_explanation'
     # Valid submission
     title = "Post Title"
     content = "This post really ties the room together"

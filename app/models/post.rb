@@ -7,6 +7,10 @@ class Post < ApplicationRecord
   validates :content, presence: true
   validate  :picture_size
 
+  def feed
+    Post.all
+  end
+
   private
 
     # Validates the size of an uploaded picture.
