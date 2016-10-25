@@ -1,9 +1,9 @@
 <li id="post-<%= post.id %>">
   <%= link_to gravatar_for(post.user, size: 50), post.user %>
   <span class="title"><%= post.title %></span>
-  <span class="content">
+  <span class="content" class="img">
     <%= post.content %>
-    <%= image_tag post.picture.url, :class => "img" if post.picture? %>
+    <%= image_tag post.picture.url if post.picture? %>
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
