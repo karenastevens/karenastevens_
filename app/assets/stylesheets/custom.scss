@@ -236,6 +236,7 @@ input {
     padding-top: 0;
   }
   .title {
+    color: black;
     display: block;
     margin-left: 60px;
     font-weight: bold;
@@ -273,6 +274,11 @@ aside {
 img {
   max-width: 100%;
   height: auto;  
+}
+
+span.author {
+  font-style: italic;
+  font-size: 0.8em;
 }
 
 span.picture {

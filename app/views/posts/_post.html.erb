@@ -11,6 +11,6 @@
       <%= link_to "delete", post, method: :delete,
                                   data: { confirm: "You sure?" } %>
     <% end %>
+    <span class="author">By <%= post.user.name %></span>
   </span>
-  <span class="user" style="font-style:italic"><%= post.user.name %></span>
 </li>
