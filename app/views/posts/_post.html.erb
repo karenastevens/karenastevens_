@@ -3,7 +3,7 @@
   <span class="title"><%= post.title %></span>
   <span class="content">
     <%= post.content %>
-    <%= image_tag post.picture.url if post.picture? %>
+    <%= image_tag post.picture.url, :class => "img" if post.picture? %>
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
