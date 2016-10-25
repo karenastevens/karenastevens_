@@ -232,8 +232,12 @@ input {
     border-top: 1px solid #e8e8e8;
   }
   .user {
-    margin-top: 5em;
+    font-style: italic;
+    color: $gray-light;
+    font-size: 0.8em;
+    margin-left: 60px;
     padding-top: 0;
+    display: block;
   }
   .title {
     color: black;
@@ -246,8 +250,6 @@ input {
     display: block;
     margin-left: 60px;
     img {
-      max-width: 100%;
-      height: auto;
       display: block;
       padding: 5px 0;
     }
@@ -274,11 +276,6 @@ aside {
 img {
   max-width: 100%;
   height: auto;  
-}
-
-span.author {
-  font-style: italic;
-  font-size: 0.8em;
 }
 
 span.picture {
