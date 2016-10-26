@@ -1,5 +1,10 @@
 <% provide(:title, @post.title) %>
-<div class="container">
+
+<div style="margin-bottom:10px">
+<%= image_tag 'blogheader.png', :class => "img-responsive center-block" %>
+</div>
+
+<div class="container" style="border-top: 1px solid #e8e8e8;">
   <div class="posts">
     <span class="title"><%= @post.title %></span>
     <span class="content"><%= @post.content %></span>
