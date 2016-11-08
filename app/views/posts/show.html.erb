@@ -7,7 +7,9 @@
 <div class="container" style="border-top: 1px solid #e8e8e8;">
   <div class="posts">
     <span class="title"><%= @post.title %></span>
-    <span class="content"><%= @post.content %></span>
+    <p>
+      <%= markdown(@post.content) %>
+    </p>
     <span class="timestamp">
       Posted <%= time_ago_in_words(@post.created_at) %> ago.
       <% if current_user?(@post.user) %>
