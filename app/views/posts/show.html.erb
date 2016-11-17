@@ -3,11 +3,12 @@
 <div style="margin-bottom:10px">
 <%= image_tag 'blogheader.png', :class => "img-responsive center-block" %>
 </div>
-
-<div class="container" style="border-top: 1px solid #e8e8e8;">
+<div class="container">
+<div class="col-md-8" style="border-top: 1px solid #e8e8e8;">
   <div class="posts">
     <span class="title"><%= @post.title %></span>
-    <p>
+    <span class="user">By <%= @post.user.name %></span>
+    <p class="img-responsive center-block">
       <%= markdown(@post.content) %>
     </p>
     <span class="timestamp">
@@ -16,7 +17,7 @@
       <%= link_to "delete", @post, method: :delete,
                                   data: { confirm: "You sure?" } %>
     <% end %>
-    <span class="user">By <%= @post.user.name %></span>
     </span>
   </div>
+</div>
 </div>

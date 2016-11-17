@@ -1,13 +1,14 @@
 <% provide(:title, 'Blog') %>
 
 <img alt="Ruby Rails blog" src="assets/blogheader.png" class="img-responsive center-block"/>
-
-<div class="row">
+<div class="container">
+<div class="col-md-10">
     <ul class="posts">
     <% @posts.each do |post| %>
     <li>
        <%= link_to gravatar_for(post.user, size: 50), post.user %>
        <%= link_to post.title, post, class: "title" %>
+       <span class="user">By <%= post.user.name %></span>
        <p>
         <%= markdown(post.content)%>
        </p>
@@ -18,9 +19,9 @@
                                   data: { confirm: "You sure?" } %>
          <% end %>
       </span>
-      <span class="user">By <%= post.user.name %></span>
     </li>
   <% end %>
 </ul>
 <%= will_paginate @posts %>
+</div>
 </div>
